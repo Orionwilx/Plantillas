@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Css Menu V12</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <style>
+  :root {
+  --primary: #6d5dfc;
+  --white: #FFFFFF;
+  --greyLight-1: #E4EBF5;
+  --greyLight-2: #c8d0e7;
+  --greyDark: #9baacf;
+  }
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+  }
+  html {
+    box-sizing: border-box;
+    font-size: 62.5%;
+    overflow-y: scroll;
+    background: var(--greyLight-1);
+  }
+
+  body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+   }
+  .icon {
+      display: flex;
+      
+  }
+  .icon__facebook, .icon__twitter, .icon__whatsapp, .icon__linkedin, .icon__instagram {
+    width: 8rem;
+    height: 8rem;
+    margin-left: 25px;
+    border-radius: 50%;
+    box-shadow: 0.3rem 0.3rem 0.6rem var(--greyLight-2), -0.2rem -0.2rem 0.5rem var(--white);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 3.5rem;
+    cursor: pointer;
+    color: var(--greyDark);
+    transition: all 0.5s ease;
+  }
+  .icon__facebook:active, .icon__twitter:active, .icon__whatsapp:active, .icon__linkedin:active, .icon__instagram:active{
+    box-shadow: inset 0.2rem 0.2rem 0.5rem var(--greyLight-2), inset -0.2rem -0.2rem 0.5rem var(--white);
+    color: var(--primary);
+  }
+  .icon__facebook:hover, .icon__twitter:hover, .icon__whatsapp:hover, .icon__linkedin:hover, .icon__instagram:hover {
+    color: var(--primary);
+  }
+  </style>
+</head>
+<body>  
+  <div class="icon">
+    <div class="icon__facebook">
+      <ion-icon class="fa fa-facebook"></ion-icon>
+    </div>
+    <div class="icon__twitter">
+      <i class="fa fa-twitter"></i>
+    </div>
+    <div class="icon__whatsapp">
+      <ion-icon class="fa fa-whatsapp"></ion-icon>
+    </div>
+    <div class="icon__linkedin">
+      <ion-icon class="fa fa-linkedin"></ion-icon>
+    </div>
+    <div class="icon__instagram">
+      <ion-icon class="fa fa-instagram"></ion-icon>
+    </div>
+  </div>
+</body>
+</html>

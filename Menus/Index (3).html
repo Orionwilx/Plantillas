@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Css Menu V11</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <style>
+   *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+   }
+   :root{
+    --bg:rgb(50, 50, 50);
+   }
+   body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: var(--bg);
+   }
+   ul{
+    position: relative;
+    display: flex;
+    gap: 50px;
+   }
+   ul li{
+    position: relative;
+    list-style: none;
+    width: 80px;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: 0.5s;
+   }
+   ul li a{
+    position: relative;
+    text-decoration: none;
+    color: var(--clr);
+    z-index: 10;
+    font-size: 2em;
+    transition: 0.5s;
+   }
+   ul li:hover a{
+    font-size: 3em;
+    filter: drop-shadow(0 0 20px var(--clr)) 
+            drop-shadow(0 0 40px var(--clr))
+            drop-shadow(0 0 60px var(--clr));
+   }
+   ul li:hover {
+   z-index: 10000;
+   transform: scale(0.75);
+   }
+   ul li::before{
+    content: '';
+    position: absolute;
+    inset: 30px;
+    box-shadow: 0 0 0 10px var(--clr),
+                0 0 0 20px var(--bg),
+                0 0 0 22px var(--clr);
+    transition: 0.5s;
+   }
+   ul li::after{
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: var(--bg);
+    transform: rotate(45deg);
+   }
+   ul li:hover:before{
+    inset: 0px;
+   }
+  </style>
+</head>
+<body>  
+  <ul>
+    <li style="--clr:#4267b2;">
+      <a href="#">
+        <i class="fa fa-facebook"></i>
+      </a>
+    </li>
+    <li style="--clr:#1DA1F2;">
+      <a href="#">
+        <i class="fa fa-twitter"></i>
+      </a>
+    </li>
+    <li style="--clr:#34a79a;">
+      <a href="#">
+        <i class="fa fa-whatsapp"></i>
+      </a>
+    </li>
+    <li style="--clr:rgb(0, 0, 0);">
+      <a href="#">
+        <i class="fa fa-linkedin"></i>
+      </a>
+    </li>
+    <li style="--clr:#E1306C;">
+      <a href="#">
+        <i class="fa fa-instagram"></i>
+      </a>
+    </li>
+</ul>
+</body>
+</html>
